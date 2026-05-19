@@ -1,0 +1,16 @@
+FROM qwen2.5-coder:14b-instruct-q4_K_M
+
+# Жестко ограничиваем контекст, чтобы модель + KV-кэш занимали ~13-14 ГБ VRAM
+PARAMETER num_ctx 12288
+PARAMETER num_predict 4096
+
+# Настройки генерации для точного кодинга без "галлюцинаций"
+PARAMETER temperature 0.1
+PARAMETER top_p 0.9
+PARAMETER repeat_penalty 1.1
+
+# Разрешаем системе динамически управлять памятью (убираем mlock!)
+PARAMETER use_mmap true
+PARAMETER use_mlock false
+
+# Никаких кастомных TEMPLATE и SYSTEM! Claude Code передаст всё сам через API.
