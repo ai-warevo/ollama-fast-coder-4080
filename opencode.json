@@ -1,5 +1,4 @@
 {
-  "path_to_this_file": "~/.config/opencode/opencode.json ",
   "$schema": "https://opencode.ai/config.json",
   "disabled_providers": [],
   "provider": {
@@ -7,8 +6,11 @@
       "name": "Ollama",
       "npm": "@ai-sdk/openai-compatible",
       "models": {
-        "gemma4-fast-coder-4080:latest": {
-          "name": "gemma4-fast-coder-4080:latest"
+        "gemma4-fast:latest": {
+          "name": "gemma4-fast:latest"
+        },
+        "gemma4-heavy:latest": {
+          "name": "gemma4-heavy:latest"
         }
       },
       "options": {
