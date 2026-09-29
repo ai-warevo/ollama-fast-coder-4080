@@ -1,0 +1,12 @@
+FROM gemma4:26b
+
+# Fast version optimized to fit entirely in 16GB VRAM (RTX 4080)
+# Context limited to ensure model + KV cache stay within VRAM limits
+PARAMETER num_ctx 12288
+PARAMETER num_predict 4096
+
+# Generation settings for precise coding
+PARAMETER temperature 0.1
+PARAMETER top_p 0.9
+PARAMETER repeat_penalty 1.1
+PARAMETER use_mmap true
