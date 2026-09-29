@@ -8,8 +8,4 @@ PARAMETER num_predict 4096
 PARAMETER temperature 0.1
 PARAMETER top_p 0.9
 PARAMETER repeat_penalty 1.1
-
-# Разрешаем системе динамически управлять памятью (убираем mlock!)
 PARAMETER use_mmap true
-
-# Никаких кастомных TEMPLATE и SYSTEM! Claude Code передаст всё сам через API.
