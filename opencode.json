@@ -1,0 +1,20 @@
+{
+  "path_to_this_file": "~/.config/opencode/opencode.json ",
+  "$schema": "https://opencode.ai/config.json",
+  "disabled_providers": [],
+  "provider": {
+    "ollama": {
+      "name": "Ollama",
+      "npm": "@ai-sdk/openai-compatible",
+      "models": {
+        "gemma4-fast-coder-4080:latest": {
+          "name": "gemma4-fast-coder-4080:latest"
+        }
+      },
+      "options": {
+        "baseURL": "http://localhost:11434/v1"
+      }
+    }
+  },
+  "mcp": {}
+}
