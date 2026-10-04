@@ -1,5 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "default_provider": "ollama",
   "disabled_providers": [],
   "provider": {
     "ollama": {
@@ -14,6 +15,15 @@
         },
         "gemma4:26b": {
           "name": "gemma4:26b"
+        },
+        "qwen2.5-coder:14b-instruct-q4_K_M": {
+          "name": "qwen2.5-coder:14b-instruct-q4_K_M"
+        },
+        "qwen-fast-coder-4080:latest": {
+          "name": "qwen-fast-coder-4080:latest"
+        },
+        "llama3:latest": {
+          "name": "llama3:latest"
         }
       },
       "options": {
