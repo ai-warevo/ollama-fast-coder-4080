@@ -1,0 +1,25 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "disabled_providers": [],
+  "provider": {
+    "ollama": {
+      "name": "Ollama",
+      "npm": "@ai-sdk/openai-compatible",
+      "models": {
+        "gemma4-fast:latest": {
+          "name": "gemma4-fast:latest"
+        },
+        "gemma4-heavy:latest": {
+          "name": "gemma4-heavy:latest"
+        },
+        "gemma4:26b": {
+          "name": "gemma4:26b"
+        }
+      },
+      "options": {
+        "baseURL": "http://localhost:11434/v1"
+      }
+    }
+  },
+  "mcp": {}
+}
