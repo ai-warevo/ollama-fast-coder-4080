@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 FROM gemma4:26b
 
 # Heavy version for maximum capacity using VRAM + DRAM (64GB)
@@ -10,3 +11,17 @@ PARAMETER temperature 0.1
 PARAMETER top_p 0.9
 PARAMETER repeat_penalty 1.1
 PARAMETER use_mmap true
+=======
+FROM gemma4:26b
+
+# Heavy version for maximum capacity using VRAM + DRAM (64GB)
+# High context window for large codebase analysis
+PARAMETER num_ctx 65536
+PARAMETER num_predict 8192
+
+# Generation settings for precise coding
+PARAMETER temperature 0.1
+PARAMETER top_p 0.9
+PARAMETER repeat_penalty 1.1
+PARAMETER use_mmap false
+>>>>>>> 093bc21bcc258edfe4fbe2c9a603be26235b2157
