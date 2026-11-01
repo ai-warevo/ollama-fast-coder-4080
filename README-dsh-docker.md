@@ -20,7 +20,7 @@ docker compose pull
 docker compose up -d --no-build
 ```
 
-## explore
+## explore http://127.0.0.1:3080/
 ```sh
 docker compose logs --no-color deepseek-harness | grep 'dsh web:'
 ```
