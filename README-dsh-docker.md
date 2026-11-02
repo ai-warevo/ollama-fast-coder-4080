@@ -17,7 +17,7 @@ sed -i "s|DSH_WORKSPACE=dsh-workspace|DSH_WORKSPACE=$(pwd)|g" deepseek-harness-d
 ```sh
 cd deepseek-harness-docker
 docker compose pull
-docker compose up -d --no-build
+docker compose up --no-build -d 
 ```
 
 ## explore
@@ -38,6 +38,17 @@ API Protocol = Open AI Chat Completions
 Models = gemma4-heavy
 ```
 
-## todo
-[ ] add llamacppqwen
-[ ] qwen coder / qwen3
+## add llamacpp batrak
+```sh
+-> settings
+-> models
+[Add model provider]
+[Custom model API]
+Provider ID = llamacpp
+Display name = llamacpp
+Base URL = http://host.docker.internal:8080/v1
+API Protocol = Open AI Chat Completions
+Models = Qwen3-Coder-30B-A3B-Instruct-IQ4_XS
+Models = Qwen3-Coder-30B-A3B-Instruct-Q8_0
+Models = Qwen2.5-Coder-14B-Instruct-Q8_0
+```
