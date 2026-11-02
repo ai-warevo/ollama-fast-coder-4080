@@ -20,7 +20,7 @@ docker compose pull
 docker compose up --no-build -d 
 ```
 
-## explore
+## explore http://127.0.0.1:3080/
 ```sh
 docker compose logs --no-color deepseek-harness | grep 'dsh web:'
 ```
@@ -52,3 +52,24 @@ Models = Qwen3-Coder-30B-A3B-Instruct-IQ4_XS
 Models = Qwen3-Coder-30B-A3B-Instruct-Q8_0
 Models = Qwen2.5-Coder-14B-Instruct-Q8_0
 ```
+
+## enable vision for ollama models (manual patch)
+*If image upload is disabled in the UI, you must add a specific patch entry to `/home/node/.dsh/profiles/web/cordis.patch.yml` that explicitly declares vision support and provides necessary metadata:*
+
+1. Edit `/home/node/.dsh/profiles/web/cordis.patch.yml`.
+2. Append the following block to the end of the file:
+```yaml
+- id: llm-deepseek
+  name: "@deepseek-ai/dsh-llm-deepseek-api-key"
+  config:
+    baseURL: http://host.docker.internal:11434/v1
+    models:
+      - id: gemma4-heavy
+        name: gemma4-heavy
+        contextWindow: 1000000
+        inputModalities:
+          - text
+          - image
+```
+3. Restart the container and refresh your browser.
+
