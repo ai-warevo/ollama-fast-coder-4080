@@ -51,6 +51,7 @@ API Protocol = Open AI Chat Completions
 Models = Qwen3-Coder-30B-A3B-Instruct-IQ4_XS
 Models = Qwen3-Coder-30B-A3B-Instruct-Q8_0
 Models = Qwen2.5-Coder-14B-Instruct-Q8_0
+Models = qwen2.5-coder-14b-instruct-q5_k_m
 ```
 
 ## enable vision for ollama models (manual patch)
