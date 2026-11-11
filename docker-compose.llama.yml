@@ -19,8 +19,10 @@ services:
       --host 0.0.0.0 
       --port 8080
       --load-mode none
-      --ctx-size 32768
-      --gpu-layers 99
       --flash-attn on
+      --gpu-layers 99
+      --cache-type-k q8_0
+      --cache-type-v q8_0
+      --ctx-size 32768
       --model /models/gemma-4-E4B-it-Q8_0.gguf
 
