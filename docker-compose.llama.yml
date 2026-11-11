@@ -23,6 +23,6 @@ services:
       --gpu-layers 99
       --cache-type-k q8_0
       --cache-type-v q8_0
-      --ctx-size 32768
+      --ctx-size 65536
       --model /models/gemma-4-E4B-it-Q8_0.gguf
 
