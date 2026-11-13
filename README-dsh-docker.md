@@ -74,3 +74,12 @@ Models = qwen2.5-coder-14b-instruct-q5_k_m
 ```
 3. Restart the container and refresh your browser.
 
+____
+
+### TRABL SHOOTIN
+compose.yaml (deepseek-harness-docker)
+
+```yml
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+```
